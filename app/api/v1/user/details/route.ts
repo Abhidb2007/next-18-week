@@ -5,11 +5,23 @@ export function GET(){
         email:"abhi@123"
     })
 }    
-    export default function UserHeader(){
-        return(
-            <div>
-                
-            </div>
+export function POST(){
+    return NextResponse.json({
+        user:"abhi",
+        email:"abhi@123"
+    })
 
-        ) 
-    }
+}
+export function DELETE(){
+    return NextResponse.json({
+        user:"abhi",
+        email:"abhi@123"
+    })  
+}
+export function PUT(){
+    return NextResponse.json({      
+        user:"abhi",
+        email:"abhi@123"
+    })  
+}   
+    
