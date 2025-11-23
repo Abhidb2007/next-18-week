@@ -3,7 +3,7 @@ export default function (){
         <div>
             <input type="text"></input>
             <input type="password"></input>
-            <button>Sign In</button>
+            <button>Sign up</button>
         </div>
     )
 }
