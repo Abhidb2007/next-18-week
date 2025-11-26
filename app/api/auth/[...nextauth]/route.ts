@@ -1,5 +1,5 @@
-import CredentialsProvider from "next-auth/providers/credentials";
 import NextAuth from "next-auth";
+import CredentialsProvider from "next-auth/providers/credentials";
 
 const handler = NextAuth({
   providers: [
@@ -9,21 +9,28 @@ const handler = NextAuth({
         username: { label: "Username", type: "text", placeholder: "abhi@gmail.com" },
         password: { label: "Password", type: "password" },
       },
-      async authorize(credentials) {
+      async authorize(credentials, req) {
         const username = credentials?.username;
         const password = credentials?.password;
 
-        // TODO: check in DB instead of hard-coding
-        if (username === "abhi@gmail.com" && password === "123456") {
-          // user found → return user object
-          return {
-            id: "1",
-            name: "Abhi",
-            email: "abhi@gmail.com",
-          };
+        console.log("Username:", username);
+        console.log("Password:", password);
+
+       
+        const user = {
+          id: "1",
+          name: "Abhi",
+          email: "abhi@gmail.com",
+          username: "abhi@gmail.com",
+        };
+
+       
+        if (username === user.username && password === "123456") {
+          
+          return user;
         }
 
-        // login failed
+        
         return null;
       },
     }),
