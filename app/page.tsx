@@ -1,5 +1,5 @@
 "use client";
-import {SessionProvider,signOut, useSession,signIn} from "next-auth/react";
+import {SessionProvider,signOut, useSession, signIn} from "next-auth/react";
 export default function Home(){
   return <SessionProvider>
     <RealHome/>
