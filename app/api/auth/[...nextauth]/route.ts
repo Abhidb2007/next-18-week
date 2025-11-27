@@ -37,6 +37,7 @@ const handler = NextAuth({
         if (username === user.username && password === "123456") {
           
         }
+        return user;
 
       
         return null;
