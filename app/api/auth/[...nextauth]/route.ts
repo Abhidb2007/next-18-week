@@ -55,7 +55,7 @@ const handler = NextAuth({
       clientId: "asd",
       clientSecret: "Asd",
     }),
-  ],
+  ]
 });
 
 export { handler as GET, handler as POST };
