@@ -4,7 +4,7 @@ import { ReactNode } from "react";
 
 
 export default function RootLayout({ children }: { children: ReactNode }) {
-  return (
+  return 
     <html lang="en">
       <body>
         <div>Header</div>
@@ -12,5 +12,5 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <div>Footer</div>
       </body>
     </html>
-  );
+  
 }
